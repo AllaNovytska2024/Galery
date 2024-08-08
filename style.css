@@ -1,30 +1,108 @@
-
 * {
   box-sizing: border-box;
 }
+html {
+  /* корневой размер шрифта */
+  font-size: 15px;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
-li > span {
+h1 {
+  margin-top: 0;
+}
+.app-header {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 25px;
+  font-size: 2rem;
   font-weight: bold;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  text-shadow: 8px 9px 10px;
+  gap: 5px;
 }
-h1{
-margin-top: 0;
+
+.app-header {
+  position: fixed;
+  z-index: 1;
+  height: 80px;
+  width: 100%;
+  padding: 25px;
+  font-size: 0,5rem;
+  font-weight: bold;
+  text-shadow: 8px 9px 10px;
+  background-color: rgba(159, 104, 164, 0.414);
+  color: rgba(0, 0, 0, 0.264);
+  
 }
-nav{
- display: flex; 
- gap: 10px;
+@media (max-width: 740px) {
+nav > a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
 }
-.img-wrapper{
+nav {
+  display: flex;
+  gap: 10px;
+}
+  nav > span {
+    cursor: pointer;
+    font-size: 0,2%;
+  }
+
+  nav > a {
+    /* прячем все ссылки из меню */
+    display: none;
+  }
+
+  .burger-menu {
+    /* показываем иконку складного меню */
+    display: block;
+  }
+}
+
+.box {
+  border: 1px solid black;
+  padding: 3px;
+  overflow-y: auto;
+  color: rgb(36, 27, 27);
+  font-size: 0, 5rem;
+  font-style: italic;
+  font-weight: bold;
+  background-color: rgb(207, 152, 152);
+  text-align: left;
+}
+#box-1 {
+  background-color: rgb(235, 187, 187);
+}
+
+#box-2 {
+  background-color: greenyellow;
+}
+
+#box-3 {
+  background-color: aqua;
+}
+
+.img-wrapper {
   width: 100%;
   height: 500px;
   overflow: hidden;
   margin-bottom: 15px;
   margin-top: 33px;
 }
-.img-wrapper>img{
+.img-wrapper > img {
   object-fit: cover;
   width: 100%;
- 
-  
 }
 
 .containerGrid {
@@ -62,7 +140,7 @@ nav{
 }
 
 .gridItemAdaptive {
-  background-color: goldenrod;
+  background-color: rgba(215, 189, 125, 0.784);
 }
 
 .containerGridAreas {
@@ -85,7 +163,7 @@ nav{
   background-size: cover;
   background-position: center;
   grid-area: scramble;
-  font-size: 100px;
+  font-size: 2rem;
 }
 
 .top {
@@ -114,60 +192,17 @@ nav{
 
 .chicken {
   border: 2px solid #5fcef7;
-  font-size: 70px;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   grid-area: 🐥;
 }
-
-.app-header {
-  display: flex;
-  position: fixed;
-  z-index: 1;
-  /* top: 20px;
-  left: 20px; */
-  height: 80px;
-  width: 100%;
-  padding: 25px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  padding: 8px;
-  text-shadow: 8px 9px 10px;
-  gap: 5px;
-  
-}
-
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
 #root {
   position: relative;
   min-height: 100%;
   background-color: rgb(21, 21, 62);
 }
-
-.app-header {
-  position: fixed;
-  z-index: 1;
-  /* top: 20px;
-  left: 20px; */
-  height: 80px;
-  width: 100%;
-  padding: 25px;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 8px 9px 10px;
-  background-color: rgba(159, 104, 164, 0.414);
-  color: rgba(0, 0, 0, 0.264);
-}
-
 
 .app-main__desc {
   background-color: beige;
@@ -181,15 +216,6 @@ body {
   grid-template-columns: 1fr 2fr;
   grid-auto-rows: 500px;
 }
-.box {
-  border: 1px solid black;
-  padding: 40px;
-  
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: white;
-}
 
 .app-footer {
   width: 100%;
@@ -201,37 +227,6 @@ body {
   font-weight: bold;
   position: absolute;
   bottom: 0;
-}
-
-#box-1 {
- 
-
-  background-color: rgb(235, 187, 187);
-  overflow-y: auto;
-  font-style: italic;
-  text-shadow: 8px 8px 8px;
-  white-space: pre-wrap;
-}
-
-#box-2 {
- 
-  background-color: greenyellow;
-  /* // Появляется вертикальный скролл, когда контент не вмещается */
-  overflow-y: auto;
-  /* Свойство white-space управляет тем, как обрабатываются пробельные символы внутри элемента. */
-
-  font-style: italic;
-  text-shadow: 8px 8px 8px;
-  white-space: pre-wrap;
-}
-
-#box-3 {
-  
-  background-color: aqua;
-  overflow-y: auto;
-  font-style: italic;
-  text-shadow: 8px 8px 8px;
-  white-space: pre-wrap;
 }
 
 .flex-container {
