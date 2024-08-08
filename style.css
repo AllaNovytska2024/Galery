@@ -67,6 +67,10 @@ li>span {
 .top {
   background-color: rgb(255, 214, 182);
   grid-area: header;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 5px 6px 7px;
+  font-style: italic;
+  color: blue;
 }
 
 .bottom {
