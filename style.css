@@ -13,6 +13,7 @@ li>span {
   grid-auto-rows: 60px;
   gap: 5px;
   width: 100%;
+  
 }
 
 .gridItem {
@@ -103,6 +104,9 @@ li>span {
   font-weight: bold;
   background-color: white;
   color: black;
+  padding: 8px;
+  text-shadow: 8px 9px 10px;
+  gap: 5px;
 }
 * {
   box-sizing: border-box;
@@ -130,8 +134,9 @@ body {
   padding: 25px;
   font-size: 24px;
   font-weight: bold;
-  background-color: white;
-  color: black;
+  text-shadow: 8px 9px 10px;
+  background-color: rgba(159, 104, 164, 0.414);
+  color: rgba(0, 0, 0, 0.264);
 }
 
 .app-main {
@@ -168,34 +173,55 @@ body {
 #box-1 {
   left: 50px;
   position: relative;
-  background-color: brown;
+  background-color: rgb(235, 187, 187);
   overflow-y: auto;
+  font-style: italic;
+  text-shadow: 8px 8px 8px;
+  white-space: pre-wrap;
+  
 }
 
 #box-2 {
-  position: static;
+  position: relative;
   /* left влиять не будет т.к у элемента position:static */
   left: 50px;
   background-color: greenyellow;
   /* // Появляется вертикальный скролл, когда контент не вмещается */
   overflow-y: auto;
   /* Свойство white-space управляет тем, как обрабатываются пробельные символы внутри элемента. */
+  
+  font-style: italic;
+  text-shadow: 8px 8px 8px;
   white-space: pre-wrap;
 }
 
 
 #box-3 {
+  left: 50px;
+  position: relative;
   background-color: aqua;
   overflow-y: auto;
+  font-style: italic;
+  text-shadow: 8px 8px 8px;
+  white-space: pre-wrap;
 }
+
 .flex-container {
   display: flex;
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
   height: 100vh; /* Высота контейнера */
 }
-
 .flex-container img {
-  max-width: 100%; /* Ограничение ширины картинки */
-  height: auto; /* Автоматическая высота */
+  max-width: 100%; /* Адаптивное изображение */
+  height: auto;
+}
+.font-effect-fire-animation {
+  color: rgb(24, 87, 79);
+  text-shadow: 8px 9px 10px;
+  text-decoration: rgb(82, 132, 116);
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
